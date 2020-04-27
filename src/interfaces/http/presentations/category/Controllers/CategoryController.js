@@ -10,8 +10,7 @@ const API = ({
         res.send({ status: 200, result: category });
     },
     getAll: async (req, res) => {
-        const Category = await getAllCategoryOperation.execute();
-        res.setHeader("X-Total-Count", category.total);
+        const category = await getAllCategoryOperation.execute();
         res.send({ status: 200, result: category.data });
     },
     createCategory: async (req, res) => {

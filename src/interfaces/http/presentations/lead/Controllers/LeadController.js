@@ -11,7 +11,6 @@ const API = ({
     },
     getAll: async (req, res) => {
         const lead = await getAllLeadOperation.execute();
-        res.setHeader("X-Total-Count", lead.total);
         res.send({ status: 200, result: lead.data });
     },
     createLead: async (req, res) => {

@@ -11,7 +11,6 @@ const API = ({
     },
     getAll: async (req, res) => {
         const group = await getAllGroupOperation.execute();
-        res.setHeader("X-Total-Count", group.total);
         res.send({ status: 200, result: group.data });
     },
     createGroup: async (req, res) => {

@@ -11,7 +11,6 @@ const API = ({
     },
     getAll: async (req, res) => {
         const team = await getAllTeamOperation.execute();
-        res.setHeader("X-Total-Count", team.total);
         res.send({ status: 200, result: team.data });
     },
     createTeam: async (req, res) => {

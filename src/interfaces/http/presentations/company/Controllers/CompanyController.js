@@ -11,7 +11,6 @@ const API = ({
     },
     getAll: async (req, res) => {
         const company = await getAllCompanyOperation.execute();
-        res.setHeader("X-Total-Count", company.total);
         res.send({ status: 200, result: company.data });
     },
     createCompany: async (req, res) => {

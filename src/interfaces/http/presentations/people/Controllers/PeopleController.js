@@ -11,7 +11,6 @@ const API = ({
     },
     getAll: async (req, res) => {
         const people = await getAllPeopleOperation.execute();
-        res.setHeader("X-Total-Count", people.total);
         res.send({ status: 200, result: people.data });
     },
     createPeople: async (req, res) => {

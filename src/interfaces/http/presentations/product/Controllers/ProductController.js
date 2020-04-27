@@ -11,7 +11,6 @@ const API = ({
     },
     getAll: async (req, res) => {
         const product = await getAllProductOperation.execute();
-        res.setHeader("X-Total-Count", product.total);
         res.send({ status: 200, result: product.data });
     },
     createProduct: async (req, res) => {

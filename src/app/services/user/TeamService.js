@@ -2,7 +2,7 @@ const Team = require("../../../domain/entitities/Team");
 
 module.exports = ({ teamRepository, createError }) => ({
     create: async (team) => {
-        const { name, description, actuive, people_id } = team;
+        const { name, description, active, people_id } = team;
 
         const createTeam = new Team(
             undefined,

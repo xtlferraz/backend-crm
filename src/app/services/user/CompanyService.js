@@ -1,11 +1,19 @@
 const Company = require("../../../domain/entitities/Company");
 
 module.exports = ({ companyRepository, createError }) => ({
-    create: async (lead) => {
-        const { name, cnpj, dtNascimento, sexo, active, email, user_id } = lead;
+    create: async (company) => {
+        const {
+            name,
+            cnpj,
+            dtNascimento,
+            sexo,
+            active,
+            email,
+            user_id,
+        } = company;
 
         const createCompany = new Company(
-            null,
+            undefined,
             name,
             cnpj,
             dtNascimento,

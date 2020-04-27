@@ -5,7 +5,7 @@ module.exports = ({ eventRepository, createError }) => ({
         const { name, description, date_include, active, team_id } = event;
 
         const createEvent = new Event(
-            null,
+            undefined,
             name,
             description,
             date_include,

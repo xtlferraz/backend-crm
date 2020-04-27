@@ -12,7 +12,7 @@ module.exports = ({ serviceRepository, createError }) => ({
         } = service;
 
         const createService = new Service(
-            null,
+            undefined,
             name,
             description,
             time_hour,

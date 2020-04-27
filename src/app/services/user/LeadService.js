@@ -17,7 +17,7 @@ module.exports = ({ leadRepository, createError }) => ({
         } = lead;
 
         const createLead = new Lead(
-            null,
+            undefined,
             name,
             description,
             email,

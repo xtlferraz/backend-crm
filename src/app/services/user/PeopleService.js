@@ -13,7 +13,7 @@ module.exports = ({ peopleRepository, createError }) => ({
         } = people;
 
         const createPeople = new People(
-            null,
+            undefined,
             name,
             cpf,
             dtNascimento,

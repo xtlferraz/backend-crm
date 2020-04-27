@@ -4,7 +4,7 @@ module.exports = ({ groupRepository, createError }) => ({
     create: async (group) => {
         const { name, role, user_id } = group;
 
-        const creategroup = new Group(null, name, role, user_id);
+        const creategroup = new Group(undefined, name, role, user_id);
 
         return await groupRepository.create(creategroup);
     },

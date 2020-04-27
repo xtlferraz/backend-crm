@@ -12,7 +12,7 @@ module.exports = ({ productRepository, createError }) => ({
         } = product;
 
         const createProduct = new Product(
-            null,
+            undefined,
             name,
             description,
             image,

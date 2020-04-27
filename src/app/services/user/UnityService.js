@@ -4,7 +4,7 @@ module.exports = ({ unityRepository, createError }) => ({
     create: async (unity) => {
         const { name, company_id } = unity;
 
-        const createUnity = new Unity(null, name, company_id);
+        const createUnity = new Unity(undefined, name, company_id);
 
         return await unityRepository.create(createUnity);
     },

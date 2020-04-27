@@ -4,7 +4,12 @@ module.exports = ({ categoryRepository, createError }) => ({
     create: async (category) => {
         const { name, description, active } = category;
 
-        const createCategory = new Category(null, name, description, active);
+        const createCategory = new Category(
+            undefined,
+            name,
+            description,
+            active
+        );
 
         return await categoryRepository.create(createCategory);
     },

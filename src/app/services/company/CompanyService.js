@@ -10,6 +10,7 @@ module.exports = ({ companyRepository, createError }) => ({
             active,
             email,
             user_id,
+            fantasy_name,
         } = company;
 
         const createCompany = new Company(
@@ -20,7 +21,8 @@ module.exports = ({ companyRepository, createError }) => ({
             sexo,
             active,
             email,
-            user_id
+            user_id,
+            fantasy_name
         );
 
         return await companyRepository.create(createCompany);

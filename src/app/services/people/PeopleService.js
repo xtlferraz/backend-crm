@@ -10,6 +10,7 @@ module.exports = ({ peopleRepository, createError }) => ({
             active,
             email,
             user_id,
+            short_name,
         } = people;
 
         const createPeople = new People(
@@ -20,7 +21,8 @@ module.exports = ({ peopleRepository, createError }) => ({
             sexo,
             active,
             email,
-            user_id
+            user_id,
+            short_name
         );
 
         return await peopleRepository.create(createPeople);

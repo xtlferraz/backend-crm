@@ -13,6 +13,7 @@ const CompanyMapper = {
             active,
             email,
             user_id,
+            fantasy_name,
         } = databaseObject;
         return new Company(
             id,
@@ -22,7 +23,8 @@ const CompanyMapper = {
             sexo,
             active,
             email,
-            user_id
+            user_id,
+            fantasy_name
         );
     },
     toDatabase: (domainEntity) => {
@@ -35,6 +37,7 @@ const CompanyMapper = {
             active,
             email,
             user_id,
+            fantasy_name,
         } = domainEntity;
 
         const companyMapper = {
@@ -46,6 +49,7 @@ const CompanyMapper = {
             active,
             email,
             user_id,
+            fantasy_name,
         };
 
         clear(companyMapper);

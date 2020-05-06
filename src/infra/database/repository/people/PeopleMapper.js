@@ -13,6 +13,7 @@ const PeopleMapper = {
             active,
             email,
             user_id,
+            short_name,
         } = databaseObject;
         return new People(
             id,
@@ -22,7 +23,8 @@ const PeopleMapper = {
             sexo,
             active,
             email,
-            user_id
+            user_id,
+            short_name
         );
     },
     toDatabase: (domainEntity) => {
@@ -35,6 +37,7 @@ const PeopleMapper = {
             active,
             email,
             user_id,
+            short_name,
         } = domainEntity;
 
         const peopleMapper = {
@@ -46,6 +49,7 @@ const PeopleMapper = {
             active,
             email,
             user_id,
+            short_name,
         };
 
         clear(peopleMapper);

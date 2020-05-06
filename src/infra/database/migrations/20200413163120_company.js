@@ -3,11 +3,11 @@ exports.up = function (knex) {
         table.increments();
         table.string("name").notNullable();
         table.integer("cnpj").notNullable();
-        table.string("dtNascimento").notNullable();
-        table.string("sexo").notNullable();
-        table.string("email").notNullable();
-        table.boolean("active").notNullable();
-        table.integer("user_id").notNullable();
+        table.string("dtNascimento");
+        table.string("sexo");
+        table.string("email");
+        table.boolean("active");
+        table.integer("user_id");
         table.foreign("user_id").references("id").inTable("user");
         table.unique("cnpj");
     });

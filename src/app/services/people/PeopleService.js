@@ -11,6 +11,24 @@ module.exports = ({ peopleRepository, createError }) => ({
             email,
             user_id,
             short_name,
+            cep,
+            address,
+            state,
+            city,
+            neighborhood,
+            country,
+            complement,
+            rg,
+            cnh,
+            dispatching_agency,
+            resume,
+            about,
+            object,
+            formation,
+            institution,
+            office,
+            hobby,
+            photograph,
         } = people;
 
         const createPeople = new People(
@@ -22,7 +40,25 @@ module.exports = ({ peopleRepository, createError }) => ({
             active,
             email,
             user_id,
-            short_name
+            short_name,
+            cep,
+            address,
+            state,
+            city,
+            neighborhood,
+            country,
+            complement,
+            rg,
+            cnh,
+            dispatching_agency,
+            resume,
+            about,
+            object,
+            formation,
+            institution,
+            office,
+            hobby,
+            photograph
         );
 
         return await peopleRepository.create(createPeople);

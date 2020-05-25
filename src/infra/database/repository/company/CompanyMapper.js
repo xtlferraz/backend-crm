@@ -38,6 +38,20 @@ const CompanyMapper = {
             email,
             user_id,
             fantasy_name,
+            cep,
+            address,
+            state,
+            city,
+            neighborhood,
+            country,
+            complement,
+            state_registration,
+            city_registration,
+            resume,
+            about,
+            mission,
+            values,
+            logo,
         } = domainEntity;
 
         const companyMapper = {
@@ -50,6 +64,20 @@ const CompanyMapper = {
             email,
             user_id,
             fantasy_name,
+            cep,
+            address,
+            state,
+            city,
+            neighborhood,
+            country,
+            complement,
+            state_registration,
+            city_registration,
+            resume,
+            about,
+            mission,
+            values,
+            logo,
         };
 
         clear(companyMapper);

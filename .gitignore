@@ -1,1 +1,4 @@
 node_modules
+src/interfaces/http/presentations/company/Controllers/company/uploads
+src/interfaces/http/presentations/people/Controllers/people/uploads
+src/infra/database/sqlite

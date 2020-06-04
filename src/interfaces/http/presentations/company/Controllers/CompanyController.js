@@ -9,7 +9,7 @@ const API = ({
 }) => ({
     getCompany: async (req, res) => {
         const company = await getCompanyOperation.execute(req.params.id);
-        res.send({ status: 200, result: [company] });
+        res.send({ status: 200, result: company });
     },
     getAll: async (req, res) => {
         const company = await getAllCompanyOperation.execute();

@@ -9,7 +9,7 @@ const API = ({
 }) => ({
     getPeople: async (req, res) => {
         const people = await getPeopleOperation.execute(req.params.id);
-        res.send({ status: 200, result: people });
+        res.send({ status: 200, result: [people] });
     },
     getAll: async (req, res) => {
         const people = await getAllPeopleOperation.execute();

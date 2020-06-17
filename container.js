@@ -1,6 +1,8 @@
 const express = require("express");
 const { createContainer, InjectionMode, asValue } = require("awilix");
 const app = express();
+const cors = require("cors");
+app.use(cors());
 const createError = require("http-errors");
 const axios = require("axios");
 const connection = require("./src/infra/database/connection/DatabaseConnection");

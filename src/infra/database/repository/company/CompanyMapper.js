@@ -14,6 +14,20 @@ const CompanyMapper = {
             email,
             user_id,
             fantasy_name,
+            cep,
+            address,
+            state,
+            city,
+            neighborhood,
+            country,
+            complement,
+            state_registration,
+            city_registration,
+            resume,
+            about,
+            mission,
+            values,
+            logo,
         } = databaseObject;
         return new Company(
             id,
@@ -24,7 +38,21 @@ const CompanyMapper = {
             active,
             email,
             user_id,
-            fantasy_name
+            fantasy_name,
+            cep,
+            address,
+            state,
+            city,
+            neighborhood,
+            country,
+            complement,
+            state_registration,
+            city_registration,
+            resume,
+            about,
+            mission,
+            values,
+            logo
         );
     },
     toDatabase: (domainEntity) => {

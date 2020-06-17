@@ -1,11 +1,9 @@
 const { loadControllers, scopePerRequest } = require("awilix-express");
-const cors = require("cors");
 const config = "security-auth";
 const morgan = require("morgan");
 const container = require("./container");
 const { app, express } = container.cradle;
 app.set("superSecurity-auth", config);
-
 app.use(morgan("tiny"));
 app.use(scopePerRequest(container));
 app.use(loadControllers("src/interfaces/http/routes/*.js", { cwd: __dirname }));
@@ -20,18 +18,10 @@ const pessoaJuridica = require("path").join(
     __dirname,
     "src/interfaces/http/presentations/company/Controllers/company/uploads/"
 );
-app.use(cors());
+
 app.use(express.static(pessoaFisica));
 app.use(express.static(pessoaJuridica));
 
-app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header(
-        "Access-Control-Allow-Headers",
-        "Origin, X-Requested-With, Content-Type, Accept"
-    );
-    next();
-});
 app.use((error, req, res, next) => {
     res.status(error.status || 500);
     res.json({

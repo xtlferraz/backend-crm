@@ -9,7 +9,7 @@ module.exports = createController(PeopleController)
     .before([authenticate])
     .get("/all", "getAll")
     .before([authenticate])
-    .put("/", "updatePeople", {
+    .put("/update", "updatePeople", {
         before: [bodyParser()],
     })
     .before([authenticate])

@@ -4,7 +4,14 @@ module.exports = ({ userRepository, createError, bcrypt }) => ({
     create: async (user) => {
         const salt = bcrypt.genSaltSync(10);
         const { name, email, password, active } = user;
-        const users = new User(undefined, name, email, password, active);
+
+        const users = new User(
+            undefined,
+            name,
+            email,
+            password,
+            active || true
+        );
         const passwordEncripty = bcrypt.hashSync(password, salt);
         users.password = passwordEncripty;
         return await userRepository.create(users);

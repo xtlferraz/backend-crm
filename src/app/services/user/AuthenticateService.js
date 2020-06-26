@@ -16,7 +16,7 @@ module.exports = ({ userRepository, createError, bcrypt, jwt, app }) => ({
         const { id } = retrieveUser;
 
         const token = jwt.sign({ data: id }, "mysecret", {
-            expiresIn: "8h", // process.env.SECRET
+            expiresIn: "1h", // process.env.SECRET
         });
 
         return { token, id };
